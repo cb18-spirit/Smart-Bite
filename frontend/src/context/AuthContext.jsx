@@ -1,4 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
+// context/AuthContext.jsx
+import React, { createContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
@@ -6,19 +7,20 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Check if user is already logged in
     const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser) setUser(storedUser);
+    if (storedUser) {
+      setUser(storedUser);
+    }
   }, []);
 
   const login = (userData) => {
-    localStorage.setItem("user", JSON.stringify(userData));
     setUser(userData);
+    localStorage.setItem("user", JSON.stringify(userData));
   };
 
   const logout = () => {
-    localStorage.removeItem("user");
     setUser(null);
+    localStorage.removeItem("user");
   };
 
   return (
@@ -28,4 +30,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export default AuthContext;

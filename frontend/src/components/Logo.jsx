@@ -1,6 +1,8 @@
 // src/components/Logo.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import smartbiteLogo from "../assets/smartbite-logo.jpg";
+
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -8,7 +10,7 @@ const Logo = () => {
   return (
     <div onClick={() => navigate("/")} style={styles.logoContainer}>
       <img
-        src="/logo.png" // 🖼️ Replace with your actual logo path
+        src="frontend\src\assets\smartbite-logo.jpg"
         alt="SmartBite Logo"
         style={styles.logo}
       />

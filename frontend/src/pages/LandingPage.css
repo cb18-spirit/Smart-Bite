@@ -34,7 +34,7 @@
     border-radius: 20px; /* Curvy square effect */
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 /* Image inside the curvy square */
@@ -108,7 +108,7 @@
 /* Feature Items */
 .features-section {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .features-section h2 {
@@ -171,31 +171,8 @@
 .landing-container {
     font-family: 'Poppins', sans-serif;
     padding: 20px;
-}
-
-.auth-buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.auth-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-    border: none;
-}
-
-.auth-btn:hover {
-    background-color: #0056b3;
-}
-
-.site-title {
-    text-align: center;
-    margin-top: 50px;
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+    margin-top: 70px; /* Ensure space for the fixed navbar */
 }
 
 /* Footer */

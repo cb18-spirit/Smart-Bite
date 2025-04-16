@@ -7,6 +7,9 @@ const userSchema = new mongoose.Schema({
   role: { type: String, enum: ["student", "admin"], default: "student" },
   oauthProvider: { type: String, enum: ["google", "meta", "none"], default: "none" },
   createdAt: { type: Date, default: Date.now },
+  otp: { type: String },
+otpExpires: { type: Date },
+
 });
 
 module.exports = mongoose.model("User", userSchema);

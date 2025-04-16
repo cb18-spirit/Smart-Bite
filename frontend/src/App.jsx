@@ -7,8 +7,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import LoadingScreen from "./components/LoadingScreen";
 import ErrorBoundary from "./components/ErrorBoundary";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar"; // ✅ Single Navbar import
+import Navbar from "./components/Navbar";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +23,7 @@ function App() {
   ) : (
     <ErrorBoundary>
       <>
-        <Navbar /> {/* ✅ Always visible at the top */}
+        <Navbar /> {/* Always visible at the top */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
@@ -39,7 +38,6 @@ function App() {
             }
           />
         </Routes>
-        <Footer />
       </>
     </ErrorBoundary>
   );
