@@ -1,1 +1,14 @@
 node_modules
+/node_modules/
+
+# Ignore virtual environments
+__pycache__/
+
+# Ignore large binary files
+*.dll
+*.pyd
+*.pack
+venv/
+node_modules/
+*.pack
+*.pyd
