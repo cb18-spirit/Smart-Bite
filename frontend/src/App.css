@@ -1,4 +1,33 @@
-/* src/styles.css or main.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafb; /* Tailwind's default bg-gray-50 */
+    color: #333; /* Tailwind's text-gray-800 */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Custom Styles if needed */
+  .loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .navbar {
+    background-color: #1f2937; /* Tailwind's bg-gray-800 */
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  

@@ -1,5 +1,3 @@
-// src/App.jsx
-
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
@@ -24,20 +22,22 @@ function App() {
     <ErrorBoundary>
       <>
         <Navbar /> {/* Always visible at the top */}
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/dashboard"
-            element={
-              localStorage.getItem("user") ? (
-                <Dashboard />
-              ) : (
-                <Navigate to="/login" />
-              )
-            }
-          />
-        </Routes>
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/dashboard"
+              element={
+                localStorage.getItem("user") ? (
+                  <Dashboard />
+                ) : (
+                  <Navigate to="/login" />
+                )
+              }
+            />
+          </Routes>
+        </div>
       </>
     </ErrorBoundary>
   );
